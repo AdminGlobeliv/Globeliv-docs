@@ -108,6 +108,15 @@ Después, mira [[Reglas de UX que no se negocian]] y la sección **Pantallas**.
 
 - [[Checklist para empezar]]
 
+## 🛠 Progreso de Desarrollo (build log)
+
+Bitácora cronológica de **qué se ha construido** sprint a sprint, con fechas, commits y decisiones. Complemento técnico a este índice de producto.
+
+- [[00 - Índice de Progreso]] — entrada principal a la bitácora
+	- [[Sprint 0 - Setup (25 may)]] — monorepo, packages, CI ✅
+	- [[Sprint 1 - Auth y Usuarios (26-27 may)]] — auth, deploys, OAuth ✅
+	- [[Sprint 2 - Streaming Core (27-28 may)]] — streams, Agora 🚧
+
 ---
 
 ## 🧠 Mapa de conexiones clave
