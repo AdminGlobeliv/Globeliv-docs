@@ -117,6 +117,18 @@ Bitácora cronológica de **qué se ha construido** sprint a sprint, con fechas,
 	- [[Sprint 1 - Auth y Usuarios (26-27 may)]] — auth, deploys, OAuth ✅
 	- [[Sprint 2 - Streaming Core (27-28 may)]] — streams, Agora 🚧
 
+## 🏗 Arquitectura Técnica
+
+Referencia atemporal de **cómo funciona el sistema hoy**. Diagramas Mermaid, flujos end-to-end, decisiones (ADRs), deploy.
+
+- [[00 - Índice de Arquitectura]] — entrada con mapa de la sección
+	- [[Visión General del Sistema]] — diagrama maestro 3 capas
+	- [[Stack y Versiones]] · [[Topología de Despliegue]]
+	- [[Flujo Frontend (Next.js)]] · [[Flujo Backend (NestJS)]] · [[Flujo Workers (BullMQ)]]
+	- [[Flujo End-to-End — Auth]] · [[Flujo End-to-End — Streaming]]
+	- [[Modelo de Datos]] · [[Seguridad y Auth]]
+	- [[Decisiones de Arquitectura (ADRs)]]
+
 ---
 
 ## 🧠 Mapa de conexiones clave

@@ -69,6 +69,7 @@ El código vive en `Globeliv/` (carpeta hermana). El spec narrativo vive en este
 - Producto / por qué: [[Qué es GlobeLiv]], [[El Diferenciador]], [[Filosofía del Producto]]
 - Pantallas que se construyen: [[Pantalla 1 - Onboarding]], [[Pantalla 3 - Player de Stream]], [[Pantalla 4 - Go Live]], [[Pantalla 6 - Perfil]], [[Pantalla 7 - Configuración]]
 - Reglas que se enforcearon en código: [[Reglas de UX que no se negocian]]
+- **Cómo funciona el sistema hoy:** [[00 - Índice de Arquitectura]]
 
 ---
 
