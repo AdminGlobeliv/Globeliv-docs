@@ -8,7 +8,7 @@ tema: agora
 
 > Patrón **interface + dos implementaciones**. Swap atómico via env `AGORA_USE_MOCK`. Permite todo el desarrollo + CI sin credenciales reales.
 
-Sprint maestro: [[Sprint 2 - Streaming Core (27-28 may)]]
+Sprint maestro: [[Sprint 2 - Streaming Core (27-29 may)]]
 
 ---
 

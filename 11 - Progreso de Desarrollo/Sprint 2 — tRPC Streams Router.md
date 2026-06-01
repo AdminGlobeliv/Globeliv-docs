@@ -8,7 +8,7 @@ tema: trpc-router
 
 > 5 procedures que cubren el lifecycle completo de un stream: crear, terminar, listar, detalle, y unirse como viewer.
 
-Sprint maestro: [[Sprint 2 - Streaming Core (27-28 may)]]
+Sprint maestro: [[Sprint 2 - Streaming Core (27-29 may)]]
 
 ---
 

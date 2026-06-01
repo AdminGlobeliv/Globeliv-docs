@@ -8,7 +8,7 @@ tema: frontend
 
 > Implementación de la [[Pantalla 4 - Go Live]] (crear transmisión) y la [[Pantalla 3 - Player de Stream]] (verla). Cliente Agora dual (mock + real) sigue el mismo patrón del backend.
 
-Sprint maestro: [[Sprint 2 - Streaming Core (27-28 may)]]
+Sprint maestro: [[Sprint 2 - Streaming Core (27-29 may)]]
 
 ---
 

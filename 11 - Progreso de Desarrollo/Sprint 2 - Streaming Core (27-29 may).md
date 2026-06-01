@@ -2,16 +2,16 @@
 sprint: 2
 nombre: Streaming Core
 fecha_inicio: 2026-05-27
-fecha_fin: en progreso
-estado: en-progreso
-duración: 2 días (a hoy)
+fecha_fin: 2026-05-29
+estado: cerrado
+duración: 3 días
 ---
 
-# Sprint 2 — Streaming Core 🚧
+# Sprint 2 — Streaming Core ✅
 
 > _"Que un usuario pueda darle Go Live, otro lo vea, y todo el lifecycle del stream funcione end-to-end con Agora."_
 
-**Estado:** en progreso. Backend y schema completos; frontend Go Live + Watch armado; falta integración real con Agora (todavía corriendo con mock token + mock client) y push a producción.
+**Estado:** ✅ **CERRADO el 2026-05-29.** Backend, schema, frontend Go Live + Watch y **Agora REAL** funcionando end-to-end en develop (`dev.globeliv.com` + `api-dev.globeliv.com`). La jornada del 29-may resolvió la integración Agora real, el deploy git-driven y una tanda grande de pulido UI/UX. Detalle en [[Sprint 2 — Cierre y fixes (29 may)]]. Sprint 3 ([[Sprint 3 - Realtime (30 may)]]) construye chat + reacciones + viewer count realtime sobre esta base.
 
 ---
 
@@ -24,7 +24,7 @@ Implementar el flow completo de stream:
 
 Con la base lista, Sprint 3 puede añadir chat + reacciones + propinas sobre este andamiaje.
 
-## ✅ Checklist (en progreso)
+## ✅ Checklist (cerrado)
 
 - [x] Schema `streams` + enums (`stream_status`, `monetization_level`)
 - [x] Migración `0003_productive_ken_ellis.sql` aplicada
@@ -35,10 +35,12 @@ Con la base lista, Sprint 3 puede añadir chat + reacciones + propinas sobre est
 - [x] Frontend: `/watch/[id]` con modo `host` y `viewer`
 - [x] Frontend: cliente Agora mock + real (`real-client.ts`, `mock-client.ts`) bajo interfaz común
 - [x] Frontend: Home Explorar con `streams.listLive` + filters + StreamCard
-- [ ] **Pendiente:** test unitario del `RealAgoraTokenService` con vectores conocidos
-- [ ] **Pendiente:** push a `main` y validar con AGORA_USE_MOCK=false en Railway
-- [ ] **Pendiente:** capture de thumbnail vía Agora REST (placeholder hasta Sprint 6)
-- [ ] **Pendiente:** viewer count realtime (placeholder estático hasta Sprint 3 con Socket.io)
+- [x] **Agora REAL configurado (29-may):** App ID `52dcf7d5…`, `AGORA_USE_MOCK=false` en Railway develop + Vercel Preview. Token real verificado (prefijo `007…`)
+- [x] **Deploy git-driven (29-may):** push a `develop` → auto-deploy web (Vercel) + API (Railway) desde `danii-bot/globeliv-app`
+- [x] **Pulido UI/UX (29-may):** tema dark HeroUI, host full-screen tipo TikTok, modal de finalizar, preview casi-en-vivo en el feed, espejo de selfie, fix botón "Iniciar transmisión"
+- [ ] **Diferido a Sprint 3:** viewer count realtime (placeholder estático → Socket.io)
+- [ ] **Diferido a Sprint 6:** capture de thumbnail vía Agora REST
+- [ ] **Deuda:** test unitario del `RealAgoraTokenService` con vectores conocidos; setup Agora en **producción** (env Production de Railway/Vercel NO lo tiene)
 
 ---
 
@@ -48,6 +50,7 @@ Con la base lista, Sprint 3 puede añadir chat + reacciones + propinas sobre est
 - [[Sprint 2 — tRPC Streams Router]] — create/end/listLive/byId/joinAsViewer
 - [[Sprint 2 — Agora Token Service (mock + real)]] — interface + real + mock + singleton
 - [[Sprint 2 — Pantallas Go Live y Watch]] — `/go-live`, `/watch/[id]`, cliente Agora dual
+- [[Sprint 2 — Cierre y fixes (29 may)]] — Agora real en develop, deploy git-driven y la tanda de pulido UI/UX que cerró el sprint
 
 ---
 
@@ -67,9 +70,9 @@ Con la base lista, Sprint 3 puede añadir chat + reacciones + propinas sobre est
 
 ## 🔑 Commits clave
 
-> Los commits del Sprint 2 todavía **no han sido pusheados** a `main` al cerrar la jornada del 28-may (modificaciones locales). El historial relevante en git remoto sigue terminando en `cbf268a` (cierre de Sprint 1).
+> **Actualización 29-may:** el trabajo del Sprint 2 ya está **pusheado a `develop`** (repo `danii-bot/globeliv-app`) y desplegado a `dev.globeliv.com` + `api-dev.globeliv.com` vía auto-deploy. El día 28 quedó como modificaciones locales; el 29 se resolvió el deploy git-driven y se subió todo. Commit base del streaming core: `778df66` (`feat(sprint-2): streaming core con Agora + shell global de navegación`). Cierre del sprint el 29-may en `d056d58`.
 
-Trabajo del Sprint 2 visible en working tree:
+Trabajo del Sprint 2 (28-may) visible en el primer push:
 
 - `packages/database/migrations/0003_productive_ken_ellis.sql` (27-may 16:30)
 - `packages/database/src/schema/streams.ts`, `schema/enums.ts` (27-may 16:30)
@@ -92,16 +95,21 @@ Trabajo del Sprint 2 visible en working tree:
 
 ---
 
-## 🚧 Trabajo pendiente para cerrar Sprint 2
+## 🚧 Resolución de pendientes (al cierre 29-may)
+
+- [x] **Set `AGORA_APP_ID` + `AGORA_APP_CERTIFICATE`** en Railway develop, switch `AGORA_USE_MOCK=false` (+ Vercel Preview `NEXT_PUBLIC_AGORA_*`)
+- [x] **Validar end-to-end** con Agora real en develop — token `007…` emitido y verificado
+- [x] **Push y deploy** — auto-deploy a `dev.globeliv.com` desde `develop` (resuelto el repo propio `danii-bot/globeliv-app`)
+- [x] **Pulido visual** de la Home Explorar y de `/watch` — feed con preview, host full-screen, modal de finalizar
+
+**Deuda técnica que se arrastra (no bloqueante):**
 
 - [ ] **Test unitario `RealAgoraTokenService`** con vectores conocidos de Agora (S2-03.8 en plan original)
-- [ ] **Set `AGORA_APP_ID` + `AGORA_APP_CERTIFICATE`** en Railway, switch `AGORA_USE_MOCK=false`
-- [ ] **Validar end-to-end** con dos browsers / dos tabs: host publica, viewer ve
 - [ ] **Manejo de desconexiones** en `useStreamClient` (token expiry, network drop)
 - [ ] **Stream end automático** cuando el host cierra el tab (`beforeunload` → `streams.end` keepalive)
 - [ ] **`Pantalla 1 - Onboarding`** real (splash con stream live) — el `/welcome` actual es placeholder
-- [ ] **Pulido visual** de la Home Explorar — filtros funcionando, empty state, loading state
-- [ ] **Push a `main`** que dispare CI verde + deploy Vercel + Railway
+- [ ] **Agora en producción** — los env de Production (Railway/Vercel) NO tienen Agora; repetir el setup si se quiere streaming en prod
+- [ ] **Refresh tokens** — hoy la sesión es un solo JWT de 24h (subido desde 15min); falta `auth.refresh` + auto-renovación (heredado a Sprint 3+)
 
 ---
 
@@ -112,14 +120,15 @@ Trabajo del Sprint 2 visible en working tree:
 - [[Pantalla 3 - Player de Stream]] — implementada como `/watch/[id]?role=viewer` con chat/tip placeholders
 - [[Pantalla 4 - Go Live]] — implementada con preview cámara + form + reverse geocode
 
-## 📋 Estado del producto en progreso
+## 📋 Estado del producto al cierre (29-may)
 
-Con `AGORA_USE_MOCK=true` (estado actual local):
+En **develop** (`dev.globeliv.com`) con `AGORA_USE_MOCK=false` — **video real**:
 
-1. Login → `/go-live` → abre cámara, pone título, click "Iniciar transmisión"
-2. Redirect a `/watch/[streamId]?role=host` — muestra "Estás transmitiendo" con preview
-3. En otro browser, `/` muestra el stream → click → `/watch/[streamId]` (modo viewer)
-4. Player muestra placeholder "transmisión en vivo (mock)" — no hay video real porque el mock client no se conecta a Agora
-5. Host click "Terminar" → `streams.end` → viewer ve "Ya no está en vivo"
+1. Login → `/go-live` → abre cámara, pone título, click "Iniciar transmisión" (con hint de requisitos si el botón está deshabilitado)
+2. Redirect a `/watch/[streamId]?role=host` — host full-screen tipo TikTok con su cámara
+3. En otro browser, `/` (feed) muestra el stream con preview casi-en-vivo → click → `/watch/[streamId]` (modo viewer ve el **video real** del host)
+4. La X del host abre el modal de confirmación → "Terminar" → `streams.end` → viewer ve la pantalla de "fin de transmisión"
 
-Con credenciales reales y `AGORA_USE_MOCK=false`, los pasos 4 muestran video real bidireccional.
+El path con `AGORA_USE_MOCK=true` sigue disponible para CI / iterar UI sin gastar minutos de Agora.
+
+> Nota operativa: si un stream queda "pegado" en `live`, se cierra a mano vía `psql` contra `DATABASE_PUBLIC_URL` (Railway Postgres): `UPDATE streams SET status='ended', ended_at=now() WHERE status='live'`.

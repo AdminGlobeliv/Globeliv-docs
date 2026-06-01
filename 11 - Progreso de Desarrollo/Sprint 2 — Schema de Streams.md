@@ -8,7 +8,7 @@ tema: schema
 
 > Tabla `streams` + 2 enums + 4 indexes. Diseñada para responder al Home Explorar barato (index compuesto status+started_at) y bloquear la regla "1 stream live por user" a nivel DB.
 
-Sprint maestro: [[Sprint 2 - Streaming Core (27-28 may)]]
+Sprint maestro: [[Sprint 2 - Streaming Core (27-29 may)]]
 
 ---
 
