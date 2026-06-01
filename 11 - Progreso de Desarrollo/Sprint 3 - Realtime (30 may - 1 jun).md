@@ -2,16 +2,16 @@
 sprint: 3
 nombre: Realtime (chat, reacciones, follows, viewer count, filtros Home)
 fecha_inicio: 2026-05-30
-fecha_fin: 2026-05-31
+fecha_fin: 2026-06-01
 estado: cerrado
-duración: 2 días (30–31 may)
+duración: 2 días (30 may – 1 jun)
 ---
 
 # Sprint 3 — Realtime ✅
 
 > _"Que los viewers puedan chatear y reaccionar durante un stream en vivo, ver cuántos están mirando en tiempo real, y seguir a quien les guste."_
 
-**Estado:** **cerrado y desplegado a develop el 2026-05-31** (arrancó el 30-may, tras [[Sprint 2 - Streaming Core (27-29 may)]]). Los 5 entregables construidos, probados E2E (local **y** contra `api-dev.globeliv.com`), + una ronda de **pulido post-cierre** (UX móvil, follows en vivo, bugs). Commits: `971dd4b` (núcleo), `571b251`, `7e87e41`, `8f06433`, `92d2809`, `be781b6` (pulido).
+**Estado:** **cerrado y desplegado a develop el 2026-06-01** (arrancó el 30-may, tras [[Sprint 2 - Streaming Core (27-29 may)]]). Los 5 entregables construidos, probados E2E (local **y** contra `api-dev.globeliv.com`), + una ronda de **pulido post-cierre** (UX móvil, follows en vivo, bugs). Commits: `971dd4b` (núcleo), `571b251`, `7e87e41`, `8f06433`, `92d2809`, `be781b6` (pulido).
 
 ---
 
@@ -88,7 +88,7 @@ Ver [[scale-first-criterion]].
 
 ---
 
-## 🧩 Pulido post-cierre (UX + bugs, 2026-05-31)
+## 🧩 Pulido post-cierre (UX + bugs, 2026-06-01)
 
 - **Chat móvil**: el viewer pasó a una sola pantalla `h-dvh` (video 44dvh + chat con input FIJO abajo). Antes el botón de enviar quedaba enterrado al fondo de una página larga.
 - **Seguir + perfil desde la transmisión**: chip del streamer arriba-izq del video (`streamer-bar.tsx`) con avatar+nombre (link a /u/username) + botón Seguir. (Cubre la deuda "botón de seguir en el Player".)
@@ -111,7 +111,7 @@ Ver [[scale-first-criterion]].
 
 ---
 
-## 🚀 Deploy (✅ completo en develop — 2026-05-31)
+## 🚀 Deploy (✅ completo en develop — 2026-06-01)
 
 - **Código:** commit `971dd4b`. **Ojo — drift de repos:** Vercel (web) despliega de `danii-bot/globeliv-app`; Railway (API) despliega de `danii-bot/Globeliv` (repo distinto). Hubo que pushear a **ambos** (`git push origin develop` + `git push danii-bot develop`). El web desplegó solo (Vercel READY, 971dd4b); la API de Railway requirió el push al repo correcto + el webhook disparó el build (SUCCESS, 971dd4b).
 - **Migración aplicada:** develop usa el **Postgres de Railway** (no la Neon local). El deploy NO corre migraciones, así que se aplicaron `0004` (chat_messages) + `0005` (follows) a mano vía `railway run --service Postgres` + `drizzle-kit migrate` (con un RAILWAY_TOKEN temporal). Verificado: las 4 tablas existen, journal de Drizzle con 6 migraciones.

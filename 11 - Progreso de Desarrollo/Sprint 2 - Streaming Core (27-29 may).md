@@ -11,7 +11,7 @@ duración: 3 días
 
 > _"Que un usuario pueda darle Go Live, otro lo vea, y todo el lifecycle del stream funcione end-to-end con Agora."_
 
-**Estado:** ✅ **CERRADO el 2026-05-29.** Backend, schema, frontend Go Live + Watch y **Agora REAL** funcionando end-to-end en develop (`dev.globeliv.com` + `api-dev.globeliv.com`). La jornada del 29-may resolvió la integración Agora real, el deploy git-driven y una tanda grande de pulido UI/UX. Detalle en [[Sprint 2 — Cierre y fixes (29 may)]]. Sprint 3 ([[Sprint 3 - Realtime (30 may)]]) construye chat + reacciones + viewer count realtime sobre esta base.
+**Estado:** ✅ **CERRADO el 2026-05-29.** Backend, schema, frontend Go Live + Watch y **Agora REAL** funcionando end-to-end en develop (`dev.globeliv.com` + `api-dev.globeliv.com`). La jornada del 29-may resolvió la integración Agora real, el deploy git-driven y una tanda grande de pulido UI/UX. Detalle en [[Sprint 2 — Cierre y fixes (29 may)]]. Sprint 3 ([[Sprint 3 - Realtime (30 may - 1 jun)]]) construye chat + reacciones + viewer count realtime sobre esta base.
 
 ---
 

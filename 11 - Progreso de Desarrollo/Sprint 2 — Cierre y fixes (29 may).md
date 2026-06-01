@@ -82,6 +82,6 @@ Tanda de fixes sobre la experiencia de transmitir y ver, en orden cronológico:
 ## 🔗 Conexiones
 
 - Nota maestra: [[Sprint 2 - Streaming Core (27-29 may)]]
-- Sigue en: [[Sprint 3 - Realtime (30 may)]]
+- Sigue en: [[Sprint 3 - Realtime (30 may - 1 jun)]]
 - Infra de dominios/repos: [[globeliv-dev-environment-setup]] (memoria)
 - Estado de streaming: [[globeliv-s2-streaming-state]] (memoria)

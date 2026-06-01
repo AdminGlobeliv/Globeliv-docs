@@ -2,7 +2,7 @@
 tipo: índice
 proyecto: GlobeLiv
 inicio: 2026-05-25
-actualizado: 2026-05-31
+actualizado: 2026-06-01
 ---
 
 # 🛠 GlobeLiv — Progreso de Desarrollo
@@ -22,7 +22,7 @@ El código vive en `Globeliv/` (carpeta hermana). El spec narrativo vive en este
 | **27 may 2026** | Sprint 1 — Auth y Usuarios (deploy backend + fixes prod) | ✅ Cerrado | [[Sprint 1 - Auth y Usuarios (26-27 may)]] |
 | **27-28 may 2026** | Sprint 2 — Streaming Core (backend, schema, frontend en mock) | ✅ Cerrado | [[Sprint 2 - Streaming Core (27-29 may)]] |
 | **29 may 2026** | Sprint 2 — Cierre: Agora real + deploy git-driven + pulido UI/UX | ✅ Cerrado | [[Sprint 2 — Cierre y fixes (29 may)]] |
-| **30–31 may 2026** | Sprint 3 — Realtime (chat, reacciones, follows, viewer count, filtros Home) | ✅ Cerrado y desplegado a develop | [[Sprint 3 - Realtime (30 may)]] |
+| **30 may – 1 jun 2026** | Sprint 3 — Realtime (chat, reacciones, follows, viewer count, filtros Home) | ✅ Cerrado y desplegado a develop | [[Sprint 3 - Realtime (30 may - 1 jun)]] |
 
 ---
 
@@ -52,7 +52,7 @@ El código vive en `Globeliv/` (carpeta hermana). El spec narrativo vive en este
 │   ├── Sprint 2 — Pantallas Go Live y Watch.md
 │   └── Sprint 2 — Cierre y fixes (29 may).md
 │
-└── Sprint 3 - Realtime (30 may).md   ← ✅ cerrado (31 may)
+└── Sprint 3 - Realtime (30 may - 1 jun).md   ← ✅ cerrado (1 jun)
 ```
 
 ---
