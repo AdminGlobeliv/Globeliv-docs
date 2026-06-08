@@ -2,7 +2,7 @@
 tipo: índice
 proyecto: GlobeLiv
 inicio: 2026-05-25
-actualizado: 2026-06-01
+actualizado: 2026-06-08
 ---
 
 # 🛠 GlobeLiv — Progreso de Desarrollo
@@ -23,6 +23,11 @@ El código vive en `Globeliv/` (carpeta hermana). El spec narrativo vive en este
 | **27-28 may 2026** | Sprint 2 — Streaming Core (backend, schema, frontend en mock) | ✅ Cerrado | [[Sprint 2 - Streaming Core (27-29 may)]] |
 | **29 may 2026** | Sprint 2 — Cierre: Agora real + deploy git-driven + pulido UI/UX | ✅ Cerrado | [[Sprint 2 — Cierre y fixes (29 may)]] |
 | **30 may – 1 jun 2026** | Sprint 3 — Realtime (chat, reacciones, follows, viewer count, filtros Home) | ✅ Cerrado y desplegado a develop | [[Sprint 3 - Realtime (30 may - 1 jun)]] |
+| **1–2 jun 2026** | Sprint 4 — Pagos y Wallet (Stripe Connect + propinas 90/10) | ⏸️ Code-complete pero **DIFERIDO** (corre en mock; límite Stripe/Perú) | [[Sprint 4 - Pagos y Wallet (1-2 jun)]] |
+| **2–3 jun 2026** | Sprint 5 — Misiones (marketplace geolocalizado, el diferenciador #1) | ✅ Cerrado y desplegado a develop | [[Sprint 5 - Misiones (2-3 jun)]] |
+| **3–5 jun 2026** | Sprint 6 — Retención y Pasaporte (push, pasaporte, onboarding, feed, eventos, webcams, replays) | ✅ Cerrado y desplegado a develop (FCM/recording/Windy en mock) | [[Sprint 6 - Retención y Pasaporte (3-5 jun)]] |
+
+> **Dónde estamos hoy (8 jun 2026):** S6 cerrado y desplegado a develop. Pendientes principales: **S7 — Moderación** (`apps/admin`, NSFW.js) y **retomar S4 pagos** con un proveedor para Perú (Mercado Pago / Culqi / dLocal). Los modos mock (FCM, Agora Recording, Windy) esperan credenciales reales.
 
 ---
 
@@ -52,7 +57,11 @@ El código vive en `Globeliv/` (carpeta hermana). El spec narrativo vive en este
 │   ├── Sprint 2 — Pantallas Go Live y Watch.md
 │   └── Sprint 2 — Cierre y fixes (29 may).md
 │
-└── Sprint 3 - Realtime (30 may - 1 jun).md   ← ✅ cerrado (1 jun)
+├── Sprint 3 - Realtime (30 may - 1 jun).md   ← ✅ cerrado (1 jun)
+│
+├── Sprint 4 - Pagos y Wallet (1-2 jun).md    ← ⏸️ code-complete, diferido (mock)
+├── Sprint 5 - Misiones (2-3 jun).md          ← ✅ cerrado y desplegado (2 jun)
+└── Sprint 6 - Retención y Pasaporte (3-5 jun).md  ← ✅ cerrado y desplegado (4 jun)
 ```
 
 ---
