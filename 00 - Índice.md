@@ -117,6 +117,9 @@ Bitácora cronológica de **qué se ha construido** sprint a sprint, con fechas,
 	- [[Sprint 1 - Auth y Usuarios (26-27 may)]] — auth, deploys, OAuth ✅
 	- [[Sprint 2 - Streaming Core (27-29 may)]] — streams, Agora ✅
 	- [[Sprint 3 - Realtime (30 may - 1 jun)]] — chat, reacciones, follows, viewer count, filtros ✅
+	- [[Sprint 4 - Pagos y Wallet (1-2 jun)]] — Stripe Connect, propinas 90/10, wallet ⏸️ (mock, diferido)
+	- [[Sprint 5 - Misiones (2-3 jun)]] — marketplace geolocalizado (diferenciador #1) ✅
+	- [[Sprint 6 - Retención y Pasaporte (3-5 jun)]] — push, pasaporte, onboarding, feed, eventos, webcams, replays ✅
 
 ## 🏗 Arquitectura Técnica
 
