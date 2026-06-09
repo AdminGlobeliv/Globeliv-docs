@@ -2,7 +2,7 @@
 tipo: índice
 proyecto: GlobeLiv
 inicio: 2026-05-25
-actualizado: 2026-06-08
+actualizado: 2026-06-09
 ---
 
 # 🛠 GlobeLiv — Progreso de Desarrollo
@@ -26,8 +26,9 @@ El código vive en `Globeliv/` (carpeta hermana). El spec narrativo vive en este
 | **1–2 jun 2026** | Sprint 4 — Pagos y Wallet (Stripe Connect + propinas 90/10) | ⏸️ Code-complete pero **DIFERIDO** (corre en mock; límite Stripe/Perú) | [[Sprint 4 - Pagos y Wallet (1-2 jun)]] |
 | **2–3 jun 2026** | Sprint 5 — Misiones (marketplace geolocalizado, el diferenciador #1) | ✅ Cerrado y desplegado a develop | [[Sprint 5 - Misiones (2-3 jun)]] |
 | **3–5 jun 2026** | Sprint 6 — Retención y Pasaporte (push, pasaporte, onboarding, feed, eventos, webcams, replays) | ✅ Cerrado y desplegado a develop (FCM/recording/Windy en mock) | [[Sprint 6 - Retención y Pasaporte (3-5 jun)]] |
+| **8 jun 2026** | Sprint 7 — Moderación (reportes, escalamiento, filtro de chat, bloqueo, panel admin) | ✅ Parte A (M0-M4) + M7 desplegados · Parte B (M5/M6) pendiente de creds | [[Sprint 7 - Moderación (8 jun)]] |
 
-> **Dónde estamos hoy (8 jun 2026):** S6 cerrado y desplegado a develop. Pendientes principales: **S7 — Moderación** (`apps/admin`, NSFW.js) y **retomar S4 pagos** con un proveedor para Perú (Mercado Pago / Culqi / dLocal). Los modos mock (FCM, Agora Recording, Windy) esperan credenciales reales.
+> **Dónde estamos hoy (9 jun 2026):** S7 con su motor de moderación real (reportes → escalamiento → corte/suspensión/ban, filtro de chat, bloqueo de sancionados) y el **panel admin `/admin`** desplegados a develop. Falta solo la **Parte B con credenciales**: M5 (NSFW, necesita Agora+R2) y M6 (alertas Telegram/email) — se construyen en mock. Para usar `/admin` hay que promover una cuenta a `role='admin'`. Pendientes de fondo siguen: **retomar S4 pagos** (proveedor para Perú) y los mocks de S6 esperando creds.
 
 ---
 
@@ -61,7 +62,8 @@ El código vive en `Globeliv/` (carpeta hermana). El spec narrativo vive en este
 │
 ├── Sprint 4 - Pagos y Wallet (1-2 jun).md    ← ⏸️ code-complete, diferido (mock)
 ├── Sprint 5 - Misiones (2-3 jun).md          ← ✅ cerrado y desplegado (2 jun)
-└── Sprint 6 - Retención y Pasaporte (3-5 jun).md  ← ✅ cerrado y desplegado (4 jun)
+├── Sprint 6 - Retención y Pasaporte (3-5 jun).md  ← ✅ cerrado y desplegado (4 jun)
+└── Sprint 7 - Moderación (8 jun).md          ← ✅ Parte A + panel admin (8 jun); M5/M6 pendientes de creds
 ```
 
 ---
