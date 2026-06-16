@@ -101,7 +101,7 @@ Que el sistema modere automáticamente y el admin tenga control. **División aco
 
 - **Parte B necesita credenciales** (se construye en mock cuando se decida):
   - **M5 NSFW:** NSFW.js corre local (gratis), pero capturar frames necesita **Agora Cloud Recording** (Customer ID/Secret + App Certificate) + **bucket R2** (las mismas creds de los replays). Costo recurrente **por minuto de stream**.
-  - **M6 alertas:** **Telegram** (bot token + chat id, gratis) y **email** a `yegaf1@gmail.com` (Resend o SMTP).
+  - **M6 alertas:** **Telegram** (bot token + chat id, gratis) y **email** a `adminglobeliv@gmail.com` (Resend o SMTP).
 - **Promover cuenta a admin:** ningún usuario tiene `role='admin'` en develop todavía → `UPDATE users SET role='admin' WHERE lower(email)=lower('…')`.
 - **Sin link a `/admin` en la nav** (se entra por URL); agregar un link solo-admin = mejora.
 - **Panel admin como app separada** (`admin.globeliv.com`) = follow-up de empaquetado (necesita proyecto Vercel + DNS).

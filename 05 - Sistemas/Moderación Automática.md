@@ -1,6 +1,6 @@
 # Moderación Automática
 
-GlobeLiv **modera 24/7 sin intervención humana**. El admin (`yegaf1@gmail.com`) solo es alertado cuando algo importante pasa.
+GlobeLiv **modera 24/7 sin intervención humana**. El admin (`adminglobeliv@gmail.com`) solo es alertado cuando algo importante pasa.
 
 ## Tres fuentes de moderación
 
@@ -35,7 +35,7 @@ Cuando un streamer acumula cortes automáticos:
 ## Alertas al admin
 
 Cuando ocurre un corte automático, suspensión o ban, el admin recibe:
-- **Email** a `yegaf1@gmail.com`.
+- **Email** a `adminglobeliv@gmail.com`.
 - **Mensaje de Telegram** al chat configurado.
 
 ## Cooldowns y gracias

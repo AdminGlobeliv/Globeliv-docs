@@ -25,7 +25,7 @@
 
 ## Alerta al admin
 
-11. El admin (`yegaf1@gmail.com`) recibe **alerta por email y Telegram** cuando se ejecuta un corte automático o una suspensión.
+11. El admin (`adminglobeliv@gmail.com`) recibe **alerta por email y Telegram** cuando se ejecuta un corte automático o una suspensión.
 
 ## Reglas clave
 
