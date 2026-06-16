@@ -187,5 +187,5 @@ Métricas del MVP ──► Estrategia de Lanzamiento ──► Plan Post-MVP
 ---
 
 ### 🔗 Contacto
-- **Fundador y Product Owner:** `yegaf1@gmail.com`
+- **Fundador y Product Owner:** `adminglobeliv@gmail.com`
 - **Dominio:** [globeliv.com](https://globeliv.com)

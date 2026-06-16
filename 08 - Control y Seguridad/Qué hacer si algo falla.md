@@ -8,7 +8,7 @@ Plan de acción rápido para los **4 incidentes más comunes**.
 2. Si es **error de código** → revertir al último commit estable.
 3. Si es **error de base de datos** → verificar las migraciones.
 4. Si es **error de servicio externo** → revisar el status del proveedor (streaming, pagos, notificaciones).
-5. **Notificar al fundador (`yegaf1@gmail.com`) inmediatamente.**
+5. **Notificar al fundador (`adminglobeliv@gmail.com`) inmediatamente.**
 
 ## 📺 Stream no carga
 

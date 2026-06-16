@@ -4,7 +4,7 @@ Reglas claras sobre **quién es dueño de qué** y **qué accesos tiene cada per
 
 ## Principio fundamental
 
-**TODAS las cuentas son creadas y propiedad del fundador (`yegaf1@gmail.com`).** El developer recibe acceso como colaborador con permisos limitados.
+**TODAS las cuentas son creadas y propiedad del fundador (`adminglobeliv@gmail.com`).** El developer recibe acceso como colaborador con permisos limitados.
 
 ## Cuentas críticas (propiedad del fundador)
 

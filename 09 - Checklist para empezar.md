@@ -28,7 +28,7 @@ Antes de escribir **la primera línea de código de funcionalidad**, confirma qu
 
 ## Aprobación
 
-- [ ] Approve del fundador (`yegaf1@gmail.com`) para empezar.
+- [ ] Approve del fundador (`adminglobeliv@gmail.com`) para empezar.
 
 ---
 
