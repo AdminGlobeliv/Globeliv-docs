@@ -2,7 +2,7 @@
 tipo: índice
 proyecto: GlobeLiv
 inicio: 2026-05-25
-actualizado: 2026-06-09
+actualizado: 2026-06-15
 ---
 
 # 🛠 GlobeLiv — Progreso de Desarrollo
@@ -27,8 +27,9 @@ El código vive en `Globeliv/` (carpeta hermana). El spec narrativo vive en este
 | **2–3 jun 2026** | Sprint 5 — Misiones (marketplace geolocalizado, el diferenciador #1) | ✅ Cerrado y desplegado a develop | [[Sprint 5 - Misiones (2-3 jun)]] |
 | **3–5 jun 2026** | Sprint 6 — Retención y Pasaporte (push, pasaporte, onboarding, feed, eventos, webcams, replays) | ✅ Cerrado y desplegado a develop (FCM/recording/Windy en mock) | [[Sprint 6 - Retención y Pasaporte (3-5 jun)]] |
 | **8 jun 2026** | Sprint 7 — Moderación (reportes, escalamiento, filtro de chat, bloqueo, panel admin) | ✅ Parte A (M0-M4) + M7 desplegados · Parte B (M5/M6) pendiente de creds | [[Sprint 7 - Moderación (8 jun)]] |
+| **10-15 jun 2026** | Sprint 8 — Pulido, i18n y Previews del Feed (fricción de Misiones/Go Live, internacionalización ES/EN, previews del feed sin blur) | 🔧 En curso · bloques desplegados a develop | [[Sprint 8 - Pulido, i18n y Previews del Feed (10-15 jun)]] |
 
-> **Dónde estamos hoy (9 jun 2026):** S7 con su motor de moderación real (reportes → escalamiento → corte/suspensión/ban, filtro de chat, bloqueo de sancionados) y el **panel admin `/admin`** desplegados a develop. Falta solo la **Parte B con credenciales**: M5 (NSFW, necesita Agora+R2) y M6 (alertas Telegram/email) — se construyen en mock. Para usar `/admin` hay que promover una cuenta a `role='admin'`. Pendientes de fondo siguen: **retomar S4 pagos** (proveedor para Perú) y los mocks de S6 esperando creds.
+> **Dónde estamos hoy (15 jun 2026):** sobre el motor ya desplegado (S5 Misiones, S2 Streaming, S7 Moderación), corre el **Sprint 8 de pulido pre-lanzamiento**: se bajó la fricción de **Misiones/Go Live** (autocompletar desde la misión, cámara trasera por defecto, buscador de lugares, geocoding sesgado, feed muestra todas las activas, mínimo 15→10 min), se internacionalizó **toda la app a ES/EN** (511 claves, selector de idioma) y se libró la **guerra contra la "pantalla borrosa / Cargando…"** en las cards del Home (dual-stream de baja resolución, primer frame desde Go Live, placeholder estilo TikTok, revelar video solo con frame no-negro, auto-actualizador). Todo desplegado a develop. Pendientes de fondo siguen: **Parte B de S7** (M5 NSFW + M6 alertas), **retomar S4 pagos** (proveedor para Perú) y los mocks de S6 esperando creds.
 
 ---
 
@@ -63,7 +64,8 @@ El código vive en `Globeliv/` (carpeta hermana). El spec narrativo vive en este
 ├── Sprint 4 - Pagos y Wallet (1-2 jun).md    ← ⏸️ code-complete, diferido (mock)
 ├── Sprint 5 - Misiones (2-3 jun).md          ← ✅ cerrado y desplegado (2 jun)
 ├── Sprint 6 - Retención y Pasaporte (3-5 jun).md  ← ✅ cerrado y desplegado (4 jun)
-└── Sprint 7 - Moderación (8 jun).md          ← ✅ Parte A + panel admin (8 jun); M5/M6 pendientes de creds
+├── Sprint 7 - Moderación (8 jun).md          ← ✅ Parte A + panel admin (8 jun); M5/M6 pendientes de creds
+└── Sprint 8 - Pulido, i18n y Previews del Feed (10-15 jun).md  ← 🔧 en curso (Misiones/Go Live, i18n ES/EN, previews del feed)
 ```
 
 ---
