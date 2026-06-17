@@ -27,8 +27,8 @@ Que el sistema modere automáticamente y el admin tenga control. **División aco
 | **M3** | Filtro de chat (palabras prohibidas + anti-spam) | ✅ |
 | **M4** | Bloqueo de suspendidos/baneados al transmitir | ✅ |
 | **M7** | Panel admin (`/admin`, gateado por rol) | ✅ |
-| **M5** | Detección NSFW automática | ⏳ necesita Agora + R2 (mock) |
-| **M6** | Alertas al admin (Telegram + email) | ⏳ necesita bot/proveedor (mock) |
+| **M5** | Detección NSFW automática | ✅ construido GRATIS (NSFW.js sobre frames del host, sin Agora/R2) · corre en mock, se activa con `NSFW_USE_MOCK=false` (15 jun) |
+| **M6** | Alertas al admin (Telegram) | ✅ construido mock-first · se activa con bot token de @BotFather (15 jun) |
 
 ---
 
@@ -99,10 +99,11 @@ Que el sistema modere automáticamente y el admin tenga control. **División aco
 
 ## 🧾 Deuda técnica / pendientes
 
-- **Parte B necesita credenciales** (se construye en mock cuando se decida):
-  - **M5 NSFW:** NSFW.js corre local (gratis), pero capturar frames necesita **Agora Cloud Recording** (Customer ID/Secret + App Certificate) + **bucket R2** (las mismas creds de los replays). Costo recurrente **por minuto de stream**.
-  - **M6 alertas:** **Telegram** (bot token + chat id, gratis) y **email** a `adminglobeliv@gmail.com` (Resend o SMTP).
-- **Promover cuenta a admin:** ningún usuario tiene `role='admin'` en develop todavía → `UPDATE users SET role='admin' WHERE lower(email)=lower('…')`.
+- **Parte B — construida mock-first (15 jun), pendiente de ACTIVAR:**
+  - **M5 NSFW (GRATIS):** NSFW.js corre local sobre los **frames que el host ya sube** para la miniatura del feed → **NO necesita Agora Recording ni R2**. Construido; se activa con `NSFW_USE_MOCK=false` (sin credenciales). _Corrección: la nota anterior decía que necesitaba Agora+R2 — era inexacto; eso es solo la versión a prueba de manipulación (de pago)._ Limitación de la versión gratis: el frame viene del navegador del host → spoofeable; lo cubren los reportes de usuarios.
+  - **M6 alertas Telegram:** construido mock-first; se activa creando un bot con @BotFather → `TELEGRAM_BOT_TOKEN` + `TELEGRAM_CHAT_ID` + `ADMIN_ALERTS_USE_MOCK=false`. Email queda como extra futuro (necesitaría Resend/SMTP).
+- **Promover cuenta a admin:** ✅ hecho — `adminglobeliv@gmail.com` es `role='admin'` en develop (15 jun).
+- **Advertencia al streamer en vivo:** ✅ fix 15 jun — antes la notificación se creaba pero no se veía en pantalla completa; ahora sale un banner sobre el video.
 - **Sin link a `/admin` en la nav** (se entra por URL); agregar un link solo-admin = mejora.
 - **Panel admin como app separada** (`admin.globeliv.com`) = follow-up de empaquetado (necesita proyecto Vercel + DNS).
 - **Reglas configurables por env** (requiere reinicio) — pasar a tabla de config para "sin redeploy" total.

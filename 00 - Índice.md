@@ -120,7 +120,7 @@ Bitácora cronológica de **qué se ha construido** sprint a sprint, con fechas,
 	- [[Sprint 4 - Pagos y Wallet (1-2 jun)]] — Stripe Connect, propinas 90/10, wallet ⏸️ (mock, diferido)
 	- [[Sprint 5 - Misiones (2-3 jun)]] — marketplace geolocalizado (diferenciador #1) ✅
 	- [[Sprint 6 - Retención y Pasaporte (3-5 jun)]] — push, pasaporte, onboarding, feed, eventos, webcams, replays ✅
-	- [[Sprint 7 - Moderación (8 jun)]] — reportes, escalamiento, filtro de chat, bloqueo, panel admin ✅ (M5 NSFW + M6 alertas pendientes de creds)
+	- [[Sprint 7 - Moderación (8 jun)]] — reportes, escalamiento, filtro de chat, bloqueo, panel admin ✅ · M5 NSFW (gratis) + M6 alertas Telegram construidos mock-first (se activan con flag/bot)
 	- [[Sprint 8 - Pulido, i18n y Previews del Feed (10-15 jun)]] — fricción de Misiones/Go Live, i18n ES/EN, previews del feed sin blur 🔧
 
 ## 🏗 Arquitectura Técnica

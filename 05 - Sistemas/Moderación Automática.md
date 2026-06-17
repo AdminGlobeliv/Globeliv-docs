@@ -13,10 +13,12 @@ Cuando los viewers tocan ⚑ Reportar en un stream:
 - Un usuario solo puede reportar un stream **una vez**.
 
 ### 2. Detección automática de contenido (NSFW)
-Un worker analiza un frame del stream cada 10 segundos:
+**NSFW.js** (open-source, **gratis**) analiza un frame cada 10 segundos:
 
 - **Confianza > 0.85** (nudity) → advertencia.
 - **Confianza > 0.95** → corte automático.
+
+El frame se reutiliza de la **miniatura que el host ya sube** al feed (Redis), así que **NO necesita Agora Cloud Recording ni R2 — cero costo**. Está construido y se activa con `NSFW_USE_MOCK=false` (sin credenciales). Limitación: el frame viene del navegador del host → spoofeable por un host técnico; lo cubren los reportes de usuarios.
 
 ### 3. Filtro de chat
 Palabras prohibidas se bloquean automáticamente. Spam (mismo mensaje 3 veces, 15+ msgs/min) también.
